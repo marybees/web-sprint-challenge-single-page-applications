@@ -1,22 +1,18 @@
-// import * as yup from 'yup'
+import * as yup from 'yup'
 
-// const formSchema = yup.object().shape({
-//   email: yup
-//     .string()
-//     .email('Must be a valid email address')
-//     .required('Must include email address'),
-//   username: yup
-//     .string()
-//     .min(3, 'Username must be at least 3 characters long')
-//     .required('Username is Required'),
-//   role: yup
-//     .string()
-//     .oneOf(['alumni', 'instructor', 'tl', 'student'], 'You must select a role')
-//     .required('You must select a role'),
-//   civil: yup
-//     .string()
-//     .oneOf(['single', 'married'], 'You must select a civil status')
-//     .required('You must select a civil status')
-// })
+const formSchema = yup.object().shape({
+    name: yup
+        .string()
+        .min(3, 'Name must be at least 3 characters long')
+        .required('Name is required'),
+    size: yup
+        .string()
+        .oneOf(['small', 'medium', 'large'], 'You must select a size.')
+        .required('You must select a size.')
+        toppings: yup
+        .string()
+        .oneOf(['pepperoni', 'mushrooms', 'onions', 'sausage', 'cheese', 'peppers'], 'At least one topping selection is required.')
+        .required('At least one topping selection is required.'),
+})
 
-// export default formSchema
+export default formSchema
