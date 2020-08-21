@@ -18,8 +18,6 @@ const initialFormValues = {
 const initialFormErrors = {
   name: '',
   size: '',
-  // toppings: '',
-  // instructions: '',
 }
 const initialPizzas = []
 const initialDisabled = true
