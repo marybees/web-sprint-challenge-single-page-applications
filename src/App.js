@@ -34,7 +34,7 @@ export default function App() {
   const postNewPizza = newPizza => {
     axios.post('https://reqres.in/api/pizzas', newPizza)
       .then(res => {
-        setUsers([...pizzas, res.data])
+        setPizzas([...pizzas, res.data])
       })
       .catch(err => {
         return err
