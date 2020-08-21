@@ -27,19 +27,9 @@ export default function PizzaForm(props) {
 
   return (
     <form className='form container' onSubmit={onSubmit}>
-      <div className='form-group submit'>
-        <h2>Order Your Pizza</h2>
-        <button disabled={disabled}>submit</button>
-        <div className='errors'>
-          <div>{errors.name}</div>
-          <div>{errors.size}</div>
-          <div>{errors.toppings}</div>
-          <div>{errors.instructions}</div>
-        </div>
-      </div>
 
       <div className='form-group inputs'>
-        <h4>What Type of Pizza Would You Like?</h4>
+        <h4>Build Your Own Pizza</h4>
         <label>Name:&nbsp;
           <input
             value={values.name}
@@ -48,6 +38,9 @@ export default function PizzaForm(props) {
             type='text'
           />
         </label>
+
+        <br></br>
+        <br></br>
 
         <label>Size:&nbsp;
           <select
@@ -64,7 +57,7 @@ export default function PizzaForm(props) {
      
 
       <div className='form-group checkboxes'>
-        <h4>Toppings</h4>
+        <h4>Select Toppings</h4>
 
         <label>Pepperoni
           <input
@@ -120,6 +113,9 @@ export default function PizzaForm(props) {
           />
         </label>
 
+        <br></br>
+        <br></br>
+
         <label>Special Instructions:&nbsp;
           <input
             value={values.instructions}
@@ -130,6 +126,18 @@ export default function PizzaForm(props) {
         </label>
 
         </div>
+
+        <div className='form-group submit'>
+        <h4>Submit Your Order</h4>
+        <button disabled={disabled}>Submit</button>
+        <div className='errors'>
+          <div>{errors.name}</div>
+          <div>{errors.size}</div>
+          <div>{errors.toppings}</div>
+          <div>{errors.instructions}</div>
+        </div>
+      </div>
+
       </div>
     </form>
   )
