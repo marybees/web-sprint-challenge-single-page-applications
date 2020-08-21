@@ -9,10 +9,6 @@ const formSchema = yup.object().shape({
         .string()
         .oneOf(['small', 'medium', 'large'], 'You must select a size.')
         .required('You must select a size.')
-//     toppings: yup
-//         .string()
-//         .oneOf(['pepperoni', 'mushrooms', 'onions', 'sausage', 'cheese', 'peppers'], 'At least one topping selection is required.')
-//         .required('At least one topping selection is required.'),
-// })
+})
 
 export default formSchema

@@ -128,7 +128,8 @@ export default function PizzaForm(props) {
             type='text'
           />
         </label>
-        
+
+        </div>
       </div>
     </form>
   )
