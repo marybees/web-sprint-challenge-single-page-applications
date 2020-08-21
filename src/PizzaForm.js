@@ -129,7 +129,7 @@ export default function PizzaForm(props) {
 
         <div className='form-group submit'>
             <h4>Submit Your Order</h4>
-            <button className='submit-button' disabled={disabled}>Submit</button>
+            <button className='submit-button' disabled={disabled}>Add to Order</button>
             <div className='errors'>
                 <div>{errors.name}</div>
                 <div>{errors.size}</div>
