@@ -18,8 +18,8 @@ const initialFormValues = {
 const initialFormErrors = {
   name: '',
   size: '',
-  toppings: '',
-  instructions: '',
+  // toppings: '',
+  // instructions: '',
 }
 const initialPizzas = []
 const initialDisabled = true
@@ -86,10 +86,6 @@ export default function App() {
     }
     postNewPizza(newPizza)
   }
-
-  // useEffect(() => {
-  //   getPizzas()
-  // }, [])
 
   useEffect(() => {
     formSchema.isValid(formValues)
