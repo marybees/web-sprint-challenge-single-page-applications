@@ -5,7 +5,7 @@ describe('Pizza App', () => {
     describe('Inputs and submit button', () => {
       
       it('Submit button is disabled', () => {
-        cy.visit('http://localhost:3000') 
+        cy.visit('http://localhost:3000/order') 
         cy.get('.submit-button').should('be.disabled')
       })
 
