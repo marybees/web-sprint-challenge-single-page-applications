@@ -5,9 +5,6 @@ import formSchema from './formSchema'
 import axios from 'axios'
 import * as yup from 'yup'
 
-//////////////// INITIAL STATES ////////////////
-//////////////// INITIAL STATES ////////////////
-//////////////// INITIAL STATES ////////////////
 const initialFormValues = {
   name: '',
   size: '',
@@ -29,10 +26,10 @@ const initialDisabled = true
 
 
 export default function App() {
-  const [pizzas, setPizzas] = useState(initialPizzas)          // array of pizza objects
-  const [formValues, setFormValues] = useState(initialFormValues) // object
-  const [formErrors, setFormErrors] = useState(initialFormErrors) // object
-  const [disabled, setDisabled] = useState(initialDisabled)       // boolean
+  const [pizzas, setPizzas] = useState(initialPizzas)
+  const [formValues, setFormValues] = useState(initialFormValues)
+  const [formErrors, setFormErrors] = useState(initialFormErrors)
+  const [disabled, setDisabled] = useState(initialDisabled)
 
   const postNewPizza = newPizza => {
     axios.post('https://reqres.in/api/pizzas', newPizza)
